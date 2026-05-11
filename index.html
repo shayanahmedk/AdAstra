@@ -191,20 +191,17 @@
       <div class="max-w-md mx-auto bg-white/10 backdrop-blur-lg rounded-3xl p-8 text-left">
         <p class="font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-paper-plane"></i> Message me directly:</p>
         
-        <!-- Telegram -->
         <a href="https://t.me/kellyyyy69" target="_blank"
            class="block w-full bg-white text-[#0055aa] text-center py-5 rounded-2xl font-semibold text-xl mb-4 flex items-center justify-center gap-3 hover:bg-[#00ffdd]">
           <i class="fa-brands fa-telegram"></i>
           Telegram: @kellyyyy69
         </a>
         
-        <!-- Email -->
         <a href="mailto:kellysheeeesh@gmail.com"
            class="block w-full border border-white/50 text-center py-5 rounded-2xl font-semibold text-xl mb-4 hover:bg-white/10">
           📧 Email: kellysheeeesh@gmail.com
         </a>
         
-        <!-- Discord -->
         <a href="https://discord.com/users/meshayannn" target="_blank"
            class="block w-full border border-white/50 text-center py-5 rounded-2xl font-semibold text-xl hover:bg-white/10 flex items-center justify-center gap-3">
           <i class="fa-brands fa-discord"></i>
@@ -219,6 +216,31 @@
   <footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm">
     <p>© 2026 AdAstra • To the Stars • All Rights Reserved • 100% Confidential</p>
   </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button onclick="scrollToTop()" id="scrollToTopBtn"
+          class="hidden fixed bottom-8 right-8 bg-[#00aff0] hover:bg-[#0099dd] text-white p-5 rounded-full shadow-2xl transition-all duration-300 z-[9999] items-center justify-center">
+    <i class="fa-solid fa-arrow-up text-2xl"></i>
+  </button>
+
+  <script>
+    // Scroll to top function
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide button when scrolling
+    window.onscroll = function() {
+      const btn = document.getElementById("scrollToTopBtn");
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        btn.classList.remove("hidden");
+        btn.classList.add("flex");
+      } else {
+        btn.classList.add("hidden");
+        btn.classList.remove("flex");
+      }
+    };
+  </script>
 
 </body>
 </html>
